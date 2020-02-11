@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+    Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div class="ion-padding">
+   <!--ion grid
+    stackblitz.com    -->
+    <!--ng model ou exploration-->
+    <ion-item class="valeur">
+      <ion-label>{{valeur}}</ion-label>
+      </ion-item>
+      <ion-grid>
+        <ion-row  *ngFor = "let numGroup of numGroups">
+          <ion-col  size="3" *ngFor = "let num of numGroup" >
+              <ion-button (click)="Appuyer(num)">{{num}}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </div>
+</ion-content>
